@@ -18,6 +18,7 @@ def edit(file, text):
     file.write(text)
 
 def generatedesktop(filename, appname, _exec, icon, cat):
+    file=open(f"{filename}.desktop","r")
     create(filename, "desktop")
     write(f"{filename}.desktop", "[Desktop Entry]\n")
     edit(f"{filename}.desktop", f"Name={appname}\n")
